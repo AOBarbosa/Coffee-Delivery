@@ -3,7 +3,7 @@ import { MapPin, ShoppingCart } from 'phosphor-react'
 
 import { NavLink } from 'react-router-dom'
 
-import { ActionsContainer, HeaderContainer, Location } from './styles'
+import { ActionsContainer, HeaderContainer, Location, ShopCart } from './styles'
 
 export function Header() {
   return (
@@ -12,17 +12,17 @@ export function Header() {
 
       <ActionsContainer>
         <Location>
+          <MapPin size={24} color="#8047F8" weight="fill" />
           <NavLink to="/checkout">
-            <MapPin size={24} />
             <span>Natal, RN</span>
           </NavLink>
         </Location>
 
-        <div>
+        <ShopCart>
           <NavLink to="/checkout">
-            <ShoppingCart size={24} />
+            <ShoppingCart size={24} weight="fill" />
           </NavLink>
-        </div>
+        </ShopCart>
       </ActionsContainer>
     </HeaderContainer>
   )
